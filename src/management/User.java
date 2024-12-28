@@ -6,10 +6,12 @@ public class User {
 	private static int userCount = 0;
 	private static int nextId = 1;
 	private int userId;
+	private String role;
 
-	public User(String username, String email) {
+	public User(String username, String email, String role) {
 		this.username = username;
 		this.email = email;
+		this.role = role;
 		this.userId = nextId++;
 		userCount++;
 	}
@@ -30,8 +32,13 @@ public class User {
 		return userId;
 	}
 
+	public String getRole() {
+		return role;
+	}
+
 	@Override
 	public String toString() {
-		return "User{" + "username='" + username + '\'' + ", email='" + email + '\'' + ", userId=" + userId + '}';
+		return "User{" + "username='" + username + '\'' + ", email='" + email + '\'' + ", userId=" + userId + ", role='"
+				+ role + '\'' + '}';
 	}
 }

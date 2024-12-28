@@ -25,7 +25,9 @@ public class UserApp {
 				String username = scanner.nextLine();
 				System.out.print("Enter email: ");
 				String email = scanner.nextLine();
-				manager.addUser(new User(username, email));
+				System.out.print("Enter role: ");
+				String role = scanner.nextLine();
+				manager.addUser(new User(username, email, role));
 				break;
 			case 2:
 				System.out.print("Enter username to remove: ");
