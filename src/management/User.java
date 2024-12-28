@@ -3,10 +3,12 @@ package management;
 public class User {
 	private String username;
 	private String email;
+	private String role;
 
-	public User(String username, String email) {
+	public User(String username, String email, String role) {
 		this.username = username;
 		this.email = email;
+		this.role = role;
 	}
 
 	public String getUsername() {
@@ -17,8 +19,12 @@ public class User {
 		return email;
 	}
 
+	public String getRole() {
+		return role;
+	}
+
 	@Override
 	public String toString() {
-		return "User{" + "username='" + username + '\'' + ", email='" + email + '\'' + '}';
+		return "User{" + "username='" + username + '\'' + ", email='" + email + '\'' + ", role='" + role + '\'' + '}';
 	}
 }
