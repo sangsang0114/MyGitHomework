@@ -26,4 +26,14 @@ public class UserManager {
 			System.out.println(user);
 		}
 	}
+
+	public User findUserByEmail(String email) {
+		for (User user : users) {
+			if (user.getEmail().equalsIgnoreCase(email)) {
+				return user;
+			}
+		}
+		return null;
+	}
+
 }
